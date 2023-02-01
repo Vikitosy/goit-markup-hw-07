@@ -1,0 +1,21 @@
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+.about-list__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-background);
+  opacity: 0.8;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}

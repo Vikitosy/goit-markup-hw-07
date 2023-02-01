@@ -1,0 +1,75 @@
+.page-footer {
+  background-color: var(--color-background);
+  font-style: normal;
+  line-height: calc(24 / 14);
+  color: var(--color-secondary);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.page-footer__column {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
+.contacts-office {
+  font-style: normal;
+  line-height: calc(24 / 14);
+  color: var(--color-secondary);
+  letter-spacing: 0.03em;
+}
+.contacts-footer {
+  font-style: normal;
+  line-height: calc(24 / 14);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.join-title {
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subscribe-form {
+  position: relative;
+  display: inline;
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-bg-project);
+}
+
+.subcribe-btn {
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  text-align: center;
+  background-color: var(--color-logo);
+  color: var(--color-secondary);
+  border: 0px;
+  border-radius: 4px;
+}
+.subcribe-btn .icon {
+  margin-left: 10px;
+  vertical-align: middle;
+}

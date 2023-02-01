@@ -1,0 +1,217 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.7);
+}
+.modal {
+  position: fixed;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background-color: var(--color-secondary);
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform 250ms var(--timing-function);
+  .backdrop.is-hidden & {
+  transform: scale(0.7);
+}
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: var(--color-logo-header);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: color 250ms var(--timing-function);
+  background-color: transparent;
+
+  .icon {
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus {
+    color: var(--color-logo);
+  }
+}
+
+.modal-title {
+  margin-bottom: 12px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  .icon {
+    position: absolute;
+    bottom: 50%;
+    left: 12px;
+    bottom: 11px;
+    fill: currentColor;
+    transition: color 250ms var(--timing-function);
+  }
+}
+.form-lable {
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--color-main-text);
+}
+.form-input {
+  padding-left: 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border: 1px solid var(--color-logo);
+  }
+}
+
+.form-input:hover + .icon,
+.form-input:focus + .icon {
+  color: #2196f3;
+}
+.coment-field {
+  display: flex;
+  flex-direction: column;
+}
+.form-coments {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--color-logo);
+    cursor: pointer;
+  }
+  &::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.accept-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.accept-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--color-main-text);
+}
+.accept-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  border-radius: 2px;
+  outline: 2px solid var(--color-logo-header);
+  outline-offset: -2px;
+}
+
+.accept-label .icon {
+  visibility: hidden;
+  .checkbox:checked + & {
+  visibility: visible;
+}
+}
+
+.checkbox:focus + .accept-label .accept-icon {
+  outline: 2px solid var(--color-logo);
+}
+.checkbox:checked + .accept-label .accept-icon {
+  visibility: hidden;
+}
+
+.contract-terms {
+  margin-left: 8px;
+  color: var(--color-logo);
+}
+.send-btn {
+  display: flex;
+  justify-content: center;
+}
+.send-btn .subcribe-btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
